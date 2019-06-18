@@ -12,11 +12,12 @@ class User(db.Model):
     email = db.Column(db.String, unique=True, nullable=False)
 
 
-db.session.add(User(name="Flask", email="example@example.com"))
+db.session.add(User(name="Example", email="example@example.com"))
 db.session.commit()
 users = User.query.all()
 
 
+@app.route('/')
 def index():
     return 'Hello from Flask app'
 
