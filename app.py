@@ -2,24 +2,17 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLAlCHEMY_DATABASE_URI'] = 'sqlite:///test.sqlite'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)
 
 
-class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String, unique=True, nullable=False)
-    email = db.Column(db.String, unique=True, nullable=False)
+class Item(content=''):
+    pass
 
 
-db.session.add(User(name="Example", email="example@example.com"))
-db.session.commit()
-users = User.query.all()
-
-
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    return 'Hello from Flask app'
+    return '<h3>Hello from Flask app</h3>'
 
 
 if __name__ == "__main__":
