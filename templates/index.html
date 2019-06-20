@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% block head %}
+<title>To Do app</title>
+{% endblock %} {% block body %}
+<div class="container">
+  <h6 id="app-title">To Do Flask App</h6>
+  {% if items|length < 1 %}
+  <h5 id="no-info">No tasks created. Create One below.</h5>
+  {% else %} {% for item in items %}
+  <div id="output">
+    <p class="text-format">{{ item.content }}</p>
+    <p class="text-format">{{ item.date_created.date() }}</p>
+  </div>
+  {% endfor %} {% endif %}
+  <form action="/" method="POST" id="form">
+    <h5 id="form-info">Add One Task below.</h5>
+    <input id="todo" name="todo" type="text" placeholder="Enter new Task" />
+    <input type="submit" value="Add Task" />
+  </form>
+</div>
+
+{% endblock %}
