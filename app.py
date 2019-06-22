@@ -21,15 +21,18 @@ class Item(db.Model):
 @app.route('/', methods=['GET', 'POST'])
 def Index():
     if request.method == 'POST':
-        itemcontent = request.form['todo']
-        newitem = Item(content=itemcontent)
+        if request.form['todo'] != '':
+            itemcontent = request.form['todo']
+            newitem = Item(content=itemcontent)
+        else:
+            return 'Please input a task..'
 
         try:
             db.session.add(newitem)
             db.session.commit()
             return redirect('/')
         except:
-            return 'There was an error creating new item'
+            return 'There was an error creating new item in db'
     else:
         items = Item.query.order_by(Item.date_created).all()
         return render_template('index.html', items=items)
