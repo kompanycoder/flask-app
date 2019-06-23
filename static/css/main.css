@@ -5,6 +5,9 @@ body {
   font-family: sans-serif, cursive, serif;
   color: #000000;
 }
+a {
+  text-decoration: none;
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -75,12 +78,13 @@ body {
   font-weight: bold;
   font-size: 1.6rem;
   padding: 20px;
+  margin-bottom: 10px;
   width: 70%;
 }
 .button {
   background: linear-gradient(180deg, #ffff33 20%, #3dff02 70%);
   border-radius: 10px;
-  display: block;
+  display: border-box;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 1.6rem;
@@ -88,12 +92,27 @@ body {
   padding: 20px;
   width: 60%;
 }
-.button :hover {
+.button:hover {
   cursor: pointer;
-  color: #ffffff;
-  flex-grow: 1;
-  background-color: #1b02ff;
-  opacity: 0.5;
+  opacity: 0.7;
+}
+#update {
+  background: linear-gradient(180deg, #84ecfa 20%, #0213ff 70%);
+  border-radius: 10px;
+  display: border-box;
+  margin-top: 0px;
+  width: 60%;
+}
+#delete {
+  background: linear-gradient(180deg, #ee7c7c 20%, #f0032b 70%);
+  margin-top: 5px;
+  width: 60%;
+}
+.button-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 4px;
 }
 #form-info {
   padding: 20px;

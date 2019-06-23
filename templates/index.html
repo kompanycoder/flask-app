@@ -1,5 +1,5 @@
 {% extends 'base.html' %} {% block head %}
-<title>To Do app</title>
+<title>Cro$$ it</title>
 {% endblock %} {% block body %}
 <div class="container">
   <h6 id="app-title">Cro<span class="gothic-ss">$$ </span>it Off App</h6>
@@ -16,6 +16,10 @@
   <div id="output">
     <div class="text-content">{{ item.content }}</div>
     <div class="text-date">{{ item.date_created.date() }}</div>
+    <div class="button-container">
+      <a class="button" id="update" href="/update/{{ item.id }}">Update</a>
+      <a class="button" id="delete" href="/delete/{{ item.id }}">Delete</a>
+    </div>
   </div>
   {% endfor %} {% endif %}
 </div>

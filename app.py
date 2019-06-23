@@ -37,6 +37,35 @@ def Index():
         items = Item.query.order_by(Item.date_created).all()
         return render_template('index.html', items=items)
 
+# route to update task
+@app.route('/update/<int:id>', methods=['GET', 'POST'])
+def Update(id):
+    item = Item.query.get_or_404(id)
+    print(Item)
+
+    if request.method == 'POST':
+        item.content = request.form['todo']
+
+        try:
+            db.session.commit()
+            return redirect('/')
+        except:
+            return 'There was an error updating Task.'
+    else:
+        return render_template('update.html', item=item)
+
+# route to delete
+@app.route('/delete/<int:id>', methods=['GET', 'POST'])
+def Delete(id):
+    item = Item.query.get_or_404(id)
+    print(item)
+    try:
+        db.session.delete(item)
+        db.session.commit()
+        return redirect('/')
+    except:
+        return 'There was an error deleting item.'
+
 
 if __name__ == "__main__":
     app.run(debug=True)
