@@ -53,7 +53,7 @@ a {
 #output {
   width: 70%;
   height: 150px;
-  background: linear-gradient(180deg, #ffffff 20%, #a5a3a3 70%);
+  background: linear-gradient(180deg, #a5a3a3 20%, #ffffff 70%);
   border-radius: 20px;
   display: flex;
   margin: 20px auto;
