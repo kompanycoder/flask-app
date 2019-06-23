@@ -84,7 +84,7 @@ a {
 .button {
   background: linear-gradient(180deg, #ffff33 20%, #3dff02 70%);
   border-radius: 10px;
-  display: border-box;
+  display: flex;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 1.6rem;
@@ -99,7 +99,6 @@ a {
 #update {
   background: linear-gradient(180deg, #84ecfa 20%, #0213ff 70%);
   border-radius: 10px;
-  display: border-box;
   margin-top: 0px;
   width: 60%;
 }
@@ -130,7 +129,6 @@ a {
   text-align: center;
   align-items: flex-start;
   overflow: hidden;
-  width: 70%;
 }
 .text-date {
   padding: 20px;

@@ -41,7 +41,6 @@ def Index():
 @app.route('/update/<int:id>', methods=['GET', 'POST'])
 def Update(id):
     item = Item.query.get_or_404(id)
-    print(Item)
 
     if request.method == 'POST':
         item.content = request.form['todo']
@@ -58,7 +57,6 @@ def Update(id):
 @app.route('/delete/<int:id>', methods=['GET', 'POST'])
 def Delete(id):
     item = Item.query.get_or_404(id)
-    print(item)
     try:
         db.session.delete(item)
         db.session.commit()
