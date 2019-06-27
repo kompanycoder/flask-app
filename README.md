@@ -1,5 +1,5 @@
 # flask-app
 ```
-flask to do app
+flask to do fullstack app with sql-alchemy
 
 ```
