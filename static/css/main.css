@@ -14,10 +14,10 @@ a {
   height: 60px;
   font-size: 1.2rem;
   font-weight: 400;
-  /* -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-  /* -webkit-animation-duration: 4s; Safari 4.0 - 8.0 */
-  /* animation-name: example; */
-  /* animation-duration: 4s; */ 
+ -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s;  /* Safari 4.0 - 8.0 */ 
+  animation-name: example;
+  animation-duration: 4s; 
 }
 .hover-right{
   position: absolute;
@@ -27,20 +27,15 @@ a {
 }
 .container-fluid{
   color: #000000;
-  background: linear-gradient(to bottom,  #72c1e0d5 0%,  #76b8ee 100%);
+  background: linear-gradient(to bottom,  #e65100 30%,  #ff9100  150%) no-repeat;
   width: 100vw;
   height: 100vh;
-  display: flex;
+  display: row;
+  flex-direction: column;
   text-align: center;
   justify-content: center;
   vertical-align: middle;
-}
-.navbar{
-  background: linear-gradient(to bottom, #e65100 0%,  #ff9100  100%);
-  color: #ffffff;
-  height: 30vh;
-  width: 100vw;
-
+  /* overflow: hidden; */
 }
 #app-title {
   color: #000000;
@@ -48,12 +43,50 @@ a {
   font-weight: 400;
   
 }
+#form {
+  width: 50vw;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  height: 40vh;
+  background: #ffffff;
+  border: solid 1px #e65100;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #000000;
+  margin-top: 25vh;
+  margin-bottom: 10vh;
+}
+.card {
+  width: 40vw;
+  position: relative;
+  display: flex;
+  font-size: 1.5em;
+  font-weight: 300;
+  line-height: 1.2;
+  text-align: justify;
+  height: 40vh;
+  background: #f7ffe1;
+  border:  solid 1px #e65100;
+  border-radius: 10px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  padding-right: 10px;
+  color: #000000;
+  
+}
+.column{
+  display: row;
+  width: 100vw;
+
+}
 
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes example {
-  from {background-color: rgba(255, 0, 0, 0);}
-  to {background-color: rgba(121, 121, 10, 0.431);}
+  from {background-color: #a02702;}
+  to {background-color: #e65100;}
 }
 
 /* Standard syntax */

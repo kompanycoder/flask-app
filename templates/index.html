@@ -3,23 +3,22 @@
 <!-- loggo idea for the app -->
 {% endblock %}
 
-{% block navbar %}
-<div class="navbar dark navbar-fixed-top">
-  <!-- ... -->
-  <h6 id="app-title" class="text-center display-4">To Do App</h6>
-</div>
-{% endblock %}
 {% block body %}
 <div class="container">
+  <div class="navbar dark navbar-fixed-top">
+    <!-- ... -->
+    <h6 id="app-title" class="text-center display-4">To Do || Not to Do logo</h6>
+    <hr class="my-4">
+  </div>
 
 
   <form action="/" method="POST" id="form">
-    <h5 id="form-info" class="display-6 lead"> sudo complete-it && sudo -eliminate it.</h5>
-    <hr class="my-4">
+
+    <h5 id="form-info" class="display-6 lead"> sudo complete && sudo eliminate </h5>
+
     <div class="form-group">
-      <label for="formGroupExampleInput"> Enter new Task...</label>
-      <input id="todo" name="todo" type="text" class="form-control" id="formGroupExampleInput"
-        placeholder="Enter new Task">
+      <label for="newElement"> Enter new Task...</label>
+      <input id="todo" name="todo" type="text" class="form-control" id="newElement" placeholder="New Task ...">
     </div>
 
     <input type="submit" value="Add Task" class="btn btn-outline-dark" />
@@ -29,9 +28,9 @@
   <hr class="my-4">
   {% if items|length < 1 %}
   <h5 id="no-info">Have something on your mind? steps to complete<span>...</span></h5>
-  {% else %} {% for item in items %}
+  {% else %}
   <div id="output" class="column">
-
+    {% for item in items %}
     <div class="card">
       <a class="btn btn-outline-danger hover-right" id="delete" href="/delete/{{ item.id }}" role="button">X</a>
       <!-- do something with the span tags -->
@@ -43,7 +42,8 @@
         <!-- <a class="btn btn-primary btn-outlined btn-lg" id="delete" href="/delete/{{ item.id }}" role="button">X</a> -->
       </div>
     </div>
-    {% endfor %} {% endif %}
+    {% endfor %}
+    {% endif %}
   </div>
 
   {% endblock %}
