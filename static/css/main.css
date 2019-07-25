@@ -24,8 +24,11 @@ a {
 }
 .btn{
   text-align: center !important;
-  background: linear-gradient(to top,  #fa732a 30%,  #ff9100  350%);
-  height: 60px;
+  background: linear-gradient(to top,  #ffdbc8 30%,  #ffffff  350%);
+  height: 40px;
+  text-decoration: none;
+
+  color: #000000;
   font-size: 1.8rem;
   font-weight: 600;
   /* -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
@@ -33,21 +36,29 @@ a {
   /* animation-name: example;
   animation-duration: 4s;   */
 }
+.capitalize{
+  display: inline-block;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS';
+  font-size: 200;
+  padding: 10px;
+}
 .hover-right{
   position: absolute;
   right: 0;
   top: 0;
-  padding-right: 10px;
+  padding: 10px;
   background: none;
+  color: #000000;
   transform: rotate(45deg);
 }
 #delete{
   font-size: 1.8em;
   font-weight: 400;
+  color: #000000;
 }
 .container-fluid{
   color: #000000;
-  background: linear-gradient(to top,  #fa732a 30%,  #ff9100  350%);
+  background: linear-gradient(to top,  #e65100  30%, #ff3d00 350%);
   width: 100vw;
   height: 100vh;
   display: row;
@@ -79,20 +90,18 @@ a {
   margin-bottom: 10vh;
 }
 .card {
-  width: 40vw;
   position: relative;
   display: flex;
-  font-size: 1.5em;
+  flex-direction: column;
+  font-size: 1.7rem;
   font-weight: 300;
-  line-height: 1.2;
+  line-height: 1.8;
   text-align: justify;
-  height: 40vh;
   background: #f7ffe1;
+  /* background-attachment: scroll; */
   border:  solid 1px #e65100;
   border-radius: 10px;
-  padding-left: 10px;
-  margin-bottom: 10px;
-  padding-right: 10px;
+  padding: 30px;
   color: #000000;
   
 }
@@ -103,9 +112,11 @@ a {
   padding: 10px;
 }
 .column{
-  display: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px; 
+  grid-template-rows: 1fr;
   width: 100vw;
-
 }
 
 
@@ -120,3 +131,25 @@ a {
   from {background-color: #da9515;}
   to {background-color: #f5b35c;}
 }
+
+/* to implement */
+
+
+/* <div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+  <label class="form-check-label" for="exampleRadios1">
+    Default radio
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+  <label class="form-check-label" for="exampleRadios2">
+    Second default radio
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+  <label class="form-check-label" for="exampleRadios3">
+    Disabled radio
+  </label>
+</div> */

@@ -21,6 +21,13 @@
       <input id="todo" name="todo" type="text" class="form-control" id="newElement" placeholder="New Task ...">
     </div>
 
+    <!-- input + button to implement -->
+    <!-- <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+        </div>
+      </div> -->
     <input type="submit" value="Add Task" class="btn btn-outline-dark" />
 
   </form>
@@ -33,14 +40,15 @@
     {% for item in items %}
     <div class="card">
       <div class="card-title">
-          <a class="btn hover-right btn-outline-info" id="delete" href="/delete/{{ item.id }}" role="button">+</a>
+          <a class="btn hover-right" id="delete" href="/delete/{{ item.id }}" role="button">+</a>
 
       </div>    
       <div class="card-text">
-          <p> {{ item.content }}</p> <br>
+        <!-- idea to implement DIsplay diferent text here -->
+          <p class="capitalize"> {{ item.content }}</p> <br>
 
           <span id="left-date">{{ item.date_created.date() }}</span> 
-        <a class="btn btn-outline-dark" id="update" href="/update/{{ item.id }}" role="button">Update</a>
+        <a class="btn" id="update" href="/update/{{ item.id }}" role="button">Update</a>
         <!-- <a class="btn btn-primary btn-outlined btn-lg" id="delete" href="/delete/{{ item.id }}" role="button">X</a> -->
       </div>
     </div>
