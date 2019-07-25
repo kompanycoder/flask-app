@@ -1,27 +1,49 @@
 {% extends 'base.html' %} {% block head %}
-<title>Cro$$ it</title>
-{% endblock %} {% block body %}
+<title>To Do || Not to Do</title>
+<!-- loggo idea for the app -->
+{% endblock %}
+
+{% block navbar %}
+<div class="navbar dark navbar-fixed-top">
+  <!-- ... -->
+  <h6 id="app-title" class="text-center display-4">To Do App</h6>
+</div>
+{% endblock %}
+{% block body %}
 <div class="container">
-  <h6 id="app-title">Cro<span class="gothic-ss">$$ </span>it Off App</h6>
+
 
   <form action="/" method="POST" id="form">
-    <h5 id="form-info">Add a Task. Complete it, Cro$$ it Off.</h5>
-    <input id="todo" name="todo" type="text" placeholder="Enter new Task" />
-    <input type="submit" value="Add Task" class="button" />
+    <h5 id="form-info" class="display-6 lead"> sudo complete-it && sudo -eliminate it.</h5>
+    <hr class="my-4">
+    <div class="form-group">
+      <label for="formGroupExampleInput"> Enter new Task...</label>
+      <input id="todo" name="todo" type="text" class="form-control" id="formGroupExampleInput"
+        placeholder="Enter new Task">
+    </div>
+
+    <input type="submit" value="Add Task" class="btn btn-outline-dark" />
+
   </form>
 
+  <hr class="my-4">
   {% if items|length < 1 %}
-  <h5 id="no-info">No tasks created. Create One Above.</h5>
+  <h5 id="no-info">Have something on your mind? steps to complete<span>...</span></h5>
   {% else %} {% for item in items %}
-  <div id="output">
-    <div class="text-content">{{ item.content }}</div>
-    <div class="text-date">{{ item.date_created.date() }}</div>
-    <div class="button-container">
-      <a class="button" id="update" href="/update/{{ item.id }}">Update</a>
-      <a class="button" id="delete" href="/delete/{{ item.id }}">Delete</a>
-    </div>
-  </div>
-  {% endfor %} {% endif %}
-</div>
+  <div id="output" class="column">
 
-{% endblock %}
+    <div class="card">
+      <a class="btn btn-outline-danger hover-right" id="delete" href="/delete/{{ item.id }}" role="button">X</a>
+      <!-- do something with the span tags -->
+      <span> {{ item.content }}</span>
+
+      <span>{{ item.date_created.date() }}</span>
+      <div class="card-text">
+        <a class="btn btn-outline-secondary btn-lg" id="update" href="/update/{{ item.id }}" role="button">Update</a>
+        <!-- <a class="btn btn-primary btn-outlined btn-lg" id="delete" href="/delete/{{ item.id }}" role="button">X</a> -->
+      </div>
+    </div>
+    {% endfor %} {% endif %}
+  </div>
+
+  {% endblock %}
