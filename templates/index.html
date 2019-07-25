@@ -5,7 +5,7 @@
 
 {% block body %}
 <div class="container">
-  <div class="navbar dark navbar-fixed-top">
+  <div class="navbar navbar-dark navbar-fixed-top">
     <!-- ... -->
     <h6 id="app-title" class="text-center display-4">To Do || Not to Do logo</h6>
     <hr class="my-4">
@@ -32,13 +32,15 @@
   <div id="output" class="column">
     {% for item in items %}
     <div class="card">
-      <a class="btn btn-outline-danger hover-right" id="delete" href="/delete/{{ item.id }}" role="button">X</a>
-      <!-- do something with the span tags -->
-      <span> {{ item.content }}</span>
+      <div class="card-title">
+          <a class="btn hover-right btn-outline-info" id="delete" href="/delete/{{ item.id }}" role="button">+</a>
 
-      <span>{{ item.date_created.date() }}</span>
+      </div>    
       <div class="card-text">
-        <a class="btn btn-outline-secondary btn-lg" id="update" href="/update/{{ item.id }}" role="button">Update</a>
+          <p> {{ item.content }}</p> <br>
+
+          <span id="left-date">{{ item.date_created.date() }}</span> 
+        <a class="btn btn-outline-dark" id="update" href="/update/{{ item.id }}" role="button">Update</a>
         <!-- <a class="btn btn-primary btn-outlined btn-lg" id="delete" href="/delete/{{ item.id }}" role="button">X</a> -->
       </div>
     </div>
