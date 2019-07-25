@@ -32,12 +32,15 @@
 
   </form>
 
-  <hr class="my-4">
+  
   {% if items|length < 1 %}
   <h5 id="no-info">Have something on your mind? steps to complete<span>...</span></h5>
   {% else %}
+  
   <div id="output" class="column">
+     
     {% for item in items %}
+    <hr class="my-4 text-center">
     <div class="card">
       <div class="card-title">
           <a class="btn hover-right" id="delete" href="/delete/{{ item.id }}" role="button">+</a>

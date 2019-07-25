@@ -61,12 +61,19 @@ a {
   background: linear-gradient(to top,  #e65100  30%, #ff3d00 350%);
   width: 100vw;
   height: 100vh;
-  display: row;
+  display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
   vertical-align: middle;
   scroll-behavior: smooth;
+}
+.container{
+  width: 100vmin;
+  height: 100vmin;
+  margin: 0;
+  padding:0;
+  display: row;
 }
 #app-title {
   color: #ffffff;
