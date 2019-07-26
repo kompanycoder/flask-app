@@ -4,13 +4,12 @@
 {% endblock %}
 
 {% block body %}
-<div class="container">
+<div class="container-fluid">
   <div class="navbar navbar-dark navbar-fixed-top">
     <!-- ... -->
     <h6 id="app-title" class="text-center display-4">To Do || Not to Do logo</h6>
-    <hr class="my-4">
+    
   </div>
-
 
   <form action="/" method="POST" id="form">
 
@@ -18,6 +17,7 @@
 
     <div class="form-group">
       <label for="newElement"> Enter new Task...</label>
+      <hr class="my-4">
       <input id="todo" name="todo" type="text" class="form-control" id="newElement" placeholder="New Task ...">
     </div>
 
@@ -31,27 +31,29 @@
     <input type="submit" value="Add Task" class="btn btn-outline-dark" />
 
   </form>
-
-  
+</div>
+<div class="container-fluid">
   {% if items|length < 1 %}
   <h5 id="no-info">Have something on your mind? steps to complete<span>...</span></h5>
   {% else %}
-  
-  <div id="output" class="column">
-     
+  <hr class="my-4 text-center">
+  <div id="output" class="column animated">
+    
     {% for item in items %}
-    <hr class="my-4 text-center">
-    <div class="card">
-      <div class="card-title">
-          <a class="btn hover-right" id="delete" href="/delete/{{ item.id }}" role="button">+</a>
+    
+    <!-- another idea bounce the ui for the cards display -->
 
-      </div>    
+    <div class="card animated infinite">
+      <div class="card-title">
+        <a class="hover-right" id="delete" href="/delete/{{ item.id }}" role="button">+</a>
+
+      </div>
       <div class="card-text">
         <!-- idea to implement DIsplay diferent text here -->
-          <p class="capitalize"> {{ item.content }}</p> <br>
+        <p class="capitalize"> <em> {{ item.content }}</em></p> <br>
 
-          <span id="left-date">{{ item.date_created.date() }}</span> 
-        <a class="btn" id="update" href="/update/{{ item.id }}" role="button">Update</a>
+        <span id="left-date">{{ item.date_created.date() }}</span>
+        <a class="img img-responsive" id="update" href="/update/{{ item.id }}" role="button">Upt icon</a>
         <!-- <a class="btn btn-primary btn-outlined btn-lg" id="delete" href="/delete/{{ item.id }}" role="button">X</a> -->
       </div>
     </div>

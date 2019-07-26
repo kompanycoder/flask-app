@@ -5,142 +5,200 @@ body {
   font-family: sans-serif;
   font-size: 1.2rem;
   font-weight: 300;
-  /* overflow: hidden; */
 }
-p{
+p {
   display: inline;
   font-size: 2.1rem;
   font-weight: 300;
   line-height: 1.5;
-  padding: 20px 20px 20px 20px;
-  
-  
+}
+a:hover {
+  text-decoration: none;
 }
 a {
   text-decoration: none;
 }
-.navbar{
-  background: #000000;
+.navbar {
+  background: #ffc37f;
+  position: fixed;
+  overflow: hidden;
+  z-index: 2;
+  padding-top: 5vh;
 }
-.btn{
+.btn {
   text-align: center !important;
-  background: linear-gradient(to top,  #ffdbc8 30%,  #ffffff  350%);
+  background: #ffc37f !important;
   height: 40px;
-  text-decoration: none;
+  border: 1px solid #e65100;
+  border-radius: 2px;
+  -webkit-animation-name: rubberBand;
+  animation-name: rubberBand;
 
   color: #000000;
   font-size: 1.8rem;
   font-weight: 600;
-  /* -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-  /* -webkit-animation-duration: 4s;  Safari 4.0 - 8.0  */
-  /* animation-name: example;
-  animation-duration: 4s;   */
 }
-.capitalize{
+.btn:hover{
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  animation-duration: 4s;
+  animation-delay: 2s;
+}
+.capitalize > em {
   display: inline-block;
-  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS';
+  text-align: left;
+  font-family: 'Lucida Sans';
+  font-style: bold italic;
+  font-size: 1.4em;
   font-size: 200;
   padding: 10px;
 }
-.hover-right{
+.hover-right {
   position: absolute;
-  right: 0;
-  top: 0;
-  padding: 10px;
+  right: 7px;
+  top: 30px;
   background: none;
   color: #000000;
+  border-radius: 20px;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-name: headShake;
+  animation-name: headShake;
+  animation-duration: 8s;
+  animation-delay: 3s;
+  padding-right: 15px;
   transform: rotate(45deg);
 }
-#delete{
+
+#delete {
   font-size: 1.8em;
   font-weight: 400;
   color: #000000;
 }
-.container-fluid{
+.container-fluid {
   color: #000000;
-  background: linear-gradient(to top,  #e65100  30%, #ff3d00 350%);
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   text-align: center;
   justify-content: center;
   vertical-align: middle;
+  -webkit-animation-name: bounceInUp;
+  animation-name: bounceInUp;
+  animation-duration: 6s;
   scroll-behavior: smooth;
 }
-.container{
-  width: 100vmin;
-  height: 100vmin;
-  margin: 0;
-  padding:0;
-  display: row;
-}
+
 #app-title {
-  color: #ffffff;
-  font-size: 1.8rem;
+  color: #000000;
+  font-size: 2.4rem;
   font-weight: 400;
-  
+  -webkit-animation-name: rubberBand;
+  animation-name: rubberBand;
 }
 #form {
   width: 50vw;
-  position: relative;
-  display: inline-block;
+  display: border-box;
+  padding: 20px 10px 20px 10px;
   text-align: center;
   height: 40vh;
-  background: #ffffff;
+  -webkit-animation-name: bounceInRight;
+  animation-name: bounceInRight;
+  animation-delay: 2s;
+  animation-duration: 5s;
   border: solid 1px #e65100;
   border-radius: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
   color: #000000;
-  margin-top: 25vh;
   margin-bottom: 10vh;
+  margin-top: 20vh;
 }
 .card {
   position: relative;
   display: flex;
   flex-direction: column;
+  width: 40vmin;
+  height: 30vmin;
   font-size: 1.7rem;
   font-weight: 300;
   line-height: 1.8;
   text-align: justify;
-  background: #f7ffe1;
-  /* background-attachment: scroll; */
-  border:  solid 1px #e65100;
+  background: #ffc37f !important;
+  border: solid 1px #e65100;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
   border-radius: 10px;
-  padding: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
   color: #000000;
-  
 }
-#left-date{
+#left-date {
+  color: #064404;
   position: absolute;
   left: 0;
   bottom: 0;
   padding: 10px;
 }
-.column{
+#update{
+  color: #064404;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  background: #ffc37f !important;
+  border-radius: 50%;
+  border: solid 1px #e65100;
+}
+.column {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10px; 
+  grid-gap: 10px;
   grid-template-rows: 1fr;
   width: 100vw;
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-duration: 8s;
+  animation-delay: 7s;
 }
 
+/* animated */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes example {
-  from {background-color: #da9515;}
-  to {background-color: #f3f3f3;}
+  from {
+    background-color: #da9515;
+  }
+  to {
+    background-color: #f3f3f3;
+  }
 }
 
 /* Standard syntax */
 @keyframes example {
-  from {background-color: #da9515;}
-  to {background-color: #f5b35c;}
+  from {
+    background-color: #da9515;
+  }
+  to {
+    background-color: #f5b35c;
+  }
 }
 
 /* to implement */
-
 
 /* <div class="form-check">
   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>

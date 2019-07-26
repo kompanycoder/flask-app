@@ -39,7 +39,7 @@ def Index():
             return 'There was an error creating new item in db'
     else:
         items = Item.query.order_by(Item.date_created).all()
-        return render_template('index.html', items=items)
+        return render_template('index.html', items=items) 
 
 # route to update task
 @app.route('/update/<int:id>', methods=['GET', 'POST'])
