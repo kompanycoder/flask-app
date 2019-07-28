@@ -1,5 +1,5 @@
 # Flask-app
-```
+
 # Flask to do fullstack app with sql-alchemy
 - User can add, delete, update tasks
 
@@ -16,4 +16,4 @@
 - Use of font awesome
 - Design Principles
 
-```
+
