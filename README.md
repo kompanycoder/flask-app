@@ -8,6 +8,7 @@
 - Server request handling 
 - Client request handling
 - Data parsing
+- Jinja 2 templating and syntax
 - Python classes and database modelling
 
 # Bonus attributes
