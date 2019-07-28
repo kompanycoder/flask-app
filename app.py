@@ -4,7 +4,7 @@ from datetime import datetime
 from flask_fontawesome import FontAwesome
 
 app = Flask(__name__)
-fa = FontAwesome(app)
+FontAwesome(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
