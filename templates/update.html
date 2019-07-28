@@ -1,19 +1,23 @@
 {% extends 'base.html' %} {% block head %}
-<title>Cro$$ it</title>
+<title>Task <i class="fas fa-jedi fa-2x"></i> Force</title>
 {% endblock %} {% block body %}
-<div class="container">
-  <h6 id="app-title">Cro<span class="gothic-ss">$$ </span>it Off Update</h6>
+<div class="container-fluid">
+  <div class="navbar navbar-dark navbar-fixed-top">
+    <h6 id="app-title" class="text-center display-4">Task <i class="fas fa-jedi fa-2x"></i>Force Update</h6>
+  </div>
+  <form action="/update/{{ item.id }}" method="POST" class="form">
 
-  <form action="/update/{{ item.id }}" method="POST" id="form">
-    <h5 id="form-info">Update Cro$$ it Task.</h5>
-    <input
-      id="todo"
-      name="todo"
-      type="text"
-      placeholder="Update Task"
-      value="{{ item.content }}"
-    />
-    <input type="submit" value="Update Task" class="button" id="update" />
+    <h5 id="form-info" class="display-6 lead">Satisfied with Update?</h5>
+
+    <div class="form-group">
+      <br />
+      <hr class="my-4">
+
+      <input id="todo" class="form-control" name="todo" type="text" placeholder="Update Task"
+        value="{{ item.content }}" />
+    </div>
+
+    <button type="submit" class="btn"> <i class="fas fa-folder-plus fa-2x"></i></button>
   </form>
 </div>
 
