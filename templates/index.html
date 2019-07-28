@@ -7,18 +7,18 @@
 <div class="container-fluid">
   <div class="navbar navbar-dark navbar-fixed-top">
     <!-- ... -->
-    <h6 id="app-title" class="text-center display-4">To Do || Not to Do logo</h6>
+    <h6 id="app-title" class="text-center display-4">Task <i class="fas fa-jedi fa-2x"></i> Force</h6>
     
   </div>
 
-  <form action="/" method="POST" id="form">
+  <form action="/" method="POST" class="form">
 
-    <h5 id="form-info" class="display-6 lead"> sudo complete && sudo eliminate </h5>
+    <h5 id="form-info" class="display-6 lead">What do you have in Mind?</h5>
 
     <div class="form-group">
-      <label for="newElement"> Enter new Task...</label>
+      <br />
       <hr class="my-4">
-      <input id="todo" name="todo" type="text" class="form-control" id="newElement" placeholder="New Task ...">
+      <input id="todo" name="todo" type="text" class="form-control" id="todo" placeholder="New Task ..." />
     </div>
 
     <!-- input + button to implement -->
@@ -28,19 +28,25 @@
           <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
         </div>
       </div> -->
-    <input type="submit" value="Add Task" class="btn btn-outline-dark" />
+      
+    <button type="submit" class="btn"> <i class="fas fa-folder-plus fa-2x"></i></button>
 
   </form>
 </div>
-<div class="container-fluid">
+<div class="container-fluid-2">
   {% if items|length < 1 %}
-  <h5 id="no-info">Have something on your mind? steps to complete<span>...</span></h5>
+
+  <h5 id="no-info lead">No Tasks. Create some...<span>...</span></h5>
+  <br>
   {% else %}
+  <h5 class="lead text-center"> <i class="fas fa-tasks fa-2x"></i> Tasks Lobby: </h5>
+  <br>
   <hr class="my-4 text-center">
+  <br>
   <div id="output" class="column animated">
     
     {% for item in items %}
-    
+    <!-- add another idea for the capitalizing of first letter  done-->
     <!-- another idea bounce the ui for the cards display -->
 
     <div class="card animated infinite">
@@ -50,10 +56,10 @@
       </div>
       <div class="card-text">
         <!-- idea to implement DIsplay diferent text here -->
-        <p class="capitalize"> <em> {{ item.content }}</em></p> <br>
+        <p class="capitalize"> {{ item.content }} </p> <br>
 
         <span id="left-date">{{ item.date_created.date() }}</span>
-        <a class="img img-responsive" id="update" href="/update/{{ item.id }}" role="button">Upt icon</a>
+        <a id="update" href="/update/{{ item.id }}" role="button"><i class="fas fa-pen-fancy fa-2x"></i></a>
         <!-- <a class="btn btn-primary btn-outlined btn-lg" id="delete" href="/delete/{{ item.id }}" role="button">X</a> -->
       </div>
     </div>

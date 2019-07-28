@@ -1,10 +1,10 @@
 from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
-from flask_bootstrap import Bootstrap
+from flask_fontawesome import FontAwesome
 
 app = Flask(__name__)
-Bootstrap(app)
+fa = FontAwesome(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
@@ -16,8 +16,7 @@ class Item(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(150), unique=True, nullable=False)
     date_created = db.Column(
-        db.DateTime, default=datetime.utcnow, nullable=False)
-
+        db.DateTime, default=datetime.now(), nullable=False)
     def __repr__(self):
         return '<Item %r>' % self.id
 
@@ -30,6 +29,7 @@ def Index():
             newitem = Item(content=itemcontent)
         else:
             return 'Please input a task..'
+            return redirect('/')
 
         try:
             db.session.add(newitem)
@@ -39,7 +39,7 @@ def Index():
             return 'There was an error creating new item in db'
     else:
         items = Item.query.order_by(Item.date_created).all()
-        return render_template('index.html', items=items) 
+        return render_template('index.html', items=items)
 
 # route to update task
 @app.route('/update/<int:id>', methods=['GET', 'POST'])
