@@ -25,8 +25,8 @@ a {
   overflow: hidden;
   z-index: 2;
   padding-top: 5vh;
-  -webkit-animation-name: jello;
-  animation-name: jello;
+  -webkit-animation-name:bounceInRight;
+  animation-name: bounceInRight;
   transition: all 4s;
 }
 .btn {
@@ -154,6 +154,13 @@ a {
   margin-bottom: 10vh;
   margin-top: 25vh;
 }
+.item{
+  color: #ffffff;
+  text-align: center;
+  width: 4px;
+  height: 4px;
+  
+}
 .card {
   position: relative;
   display: flex;
@@ -241,10 +248,10 @@ a {
 
 /* Safari 4.0 - 8.0 */
 
-@media(max-width: 720px){
+@media(max-width: 719px){
   .container-fluid{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 95vmin;
     padding: 0;
     margin:0;
@@ -257,14 +264,14 @@ a {
   }
   .form{
     width: 85vmin;
-    padding: 5px;
-    justify-self: center;
+    padding-bottom: 20vh;
+    justify-content: center;
   }
   .container-fluid-2{
     padding-top: 5vh;
   }
 }
-@media(min-width: 721px){
+@media(min-width: 720px){
   
   .card{
     width: 85vmin;
@@ -280,5 +287,6 @@ a {
 @media(min-width: 1200px){
   .form{
     width: 65vmin;
+    display: flex
   }
 }

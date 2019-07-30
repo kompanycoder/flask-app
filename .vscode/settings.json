@@ -1,4 +1,15 @@
 {
     "python.pythonPath": "env\\Scripts\\python.exe",
-    "python.formatting.provider": "autopep8"
+    "python.formatting.provider": "autopep8",
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./env",
+        "-p",
+        "test*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.unittestEnabled": false,
+    "python.testing.promptToConfigure": false
 }

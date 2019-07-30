@@ -9,13 +9,16 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # init db session for the whole app
 db = SQLAlchemy(app)
-# do something with app...
+# do something with app..
+
 
 class Item(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    completed = db.Column(db.String(30), nullable=True)
     content = db.Column(db.String(150), unique=True, nullable=False)
     date_created = db.Column(
-        db.DateTime, default=datetime.now(), nullable=False)
+        db.DateTime(), default=datetime.utcnow(), nullable=False)
+
     def __repr__(self):
         return '<Item %r>' % self.id
 
