@@ -1,4 +1,7 @@
 {
-    "python.pythonPath": "env\\Scripts\\python.exe",
-    "python.formatting.provider": "autopep8"
+    "python.pythonPath": "env/bin/python",
+    "python.formatting.provider": "autopep8",
+    "deepscan.enable": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
 }
