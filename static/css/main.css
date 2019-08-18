@@ -1,4 +1,4 @@
-*,
+html,
 body {
   margin: 0;
   padding: 0;
@@ -25,20 +25,18 @@ a {
   overflow: hidden;
   z-index: 2;
   padding-top: 5vh;
-  -webkit-animation-name: jello;
-  animation-name: jello;
+  -webkit-animation-name: fadeInTop;
+  animation-name: fadeInTop;
   transition: all 4s;
 }
-.btn {
+.btn{
   text-align: center !important;
-  background-image: url(../icons/icons--02.svg);
   background: none;
-  justify-content: center;
-  display: flex;
-  align-items: center;
   height: 40px;
   border: 1px solid #e65100;
+  background: #fff1e0 !important;
   border-radius: 2px;
+  justify-content: center;
   -webkit-animation-name: bounceIn;
   animation-name: bounceIn;
   animation-duration: 4s;
@@ -47,7 +45,9 @@ a {
   color: #000000;
   font-size: 1.8rem;
   font-weight: 600;
+  bottom: 10px;
 }
+
 .btn:hover {
   background: #e65100;
   color: #ffffff;
@@ -56,6 +56,7 @@ a {
   animation-duration: 4s;
   animation-delay: 2s;
 }
+
 .capitalize {
   display: inline-block;
   text-align: left;
@@ -98,7 +99,7 @@ a {
   width: 100vw;
   height: 90vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   text-align: center;
   vertical-align: center;
   justify-content: center;
@@ -134,26 +135,32 @@ a {
   animation-name: rubberBand;
 }
 .form {
-  width: 50vw;
+  width: 70vw;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  align-items: center;
   padding: 10px;
-  flex-wrap: wrap;
   text-align: center;
-  height: 40vh;
+  height: 350px;
   -webkit-animation-name: bounceInLeft;
   animation-name: bounceIn;
   animation-delay: 2s;
-  -webkit-animation-delay: 2s;
-  -webkit-animation-duration: 3s;
   animation-duration: 3s;
   border: solid 1px #e65100;
   border-radius: 10px;
   color: #000000;
   margin-bottom: 10vh;
   margin-top: 25vh;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-duration: 3s;
+  position: relative;
 }
+.form-bound {
+  position: absolute;
+  bottom: 20px;
+}
+
 .card {
   position: relative;
   display: flex;
@@ -199,7 +206,7 @@ a {
   bottom: 3px;
   padding: 10px;
   background: #fff1e0 !important;
-  border-radius: 20%;
+  border-radius: 10%;
   border: solid 1px #e65100;
 }
 #update:hover {
@@ -241,44 +248,4 @@ a {
 
 /* Safari 4.0 - 8.0 */
 
-@media(max-width: 720px){
-  .container-fluid{
-    display: flex;
-    flex-direction: row;
-    width: 95vmin;
-    padding: 0;
-    margin:0;
-  }
-  .card{
-    width: 85vw;
-  }
-  .column{
-    justify-content: center;
-  }
-  .form{
-    width: 85vmin;
-    padding: 5px;
-    justify-self: center;
-  }
-  .container-fluid-2{
-    padding-top: 5vh;
-  }
-}
-@media(min-width: 721px){
-  
-  .card{
-    width: 85vmin;
-  }
-  .column{
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .form{
-    padding-bottom: 10vh;
-  }
-}
-@media(min-width: 1200px){
-  .form{
-    width: 65vmin;
-  }
-}
+
