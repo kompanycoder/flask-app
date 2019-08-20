@@ -1,6 +1,8 @@
-# Flask-app
+# Task-force app
+  
+  Flask app displaying CRUD capabilities of fullstack applications with sql-alchemy.
 
-# Flask to do fullstack app with sql-alchemy
+#App capabilities
 - User can add, delete, update tasks
 
 # What was learnt:
@@ -16,5 +18,3 @@
 - Versioning and updating software
 - Use of font awesome
 - Design Principles
-
-
