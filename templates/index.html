@@ -4,28 +4,33 @@
 {% endblock %}
 
 {% block body %}
+<nav class="navbar navbar-dark navbar-fixed-top">
+  
+  <a id="app-title" class="nav-brand text-center display-4">Task <i class="fas fa-jedi fa-2x"></i> Force</a>
+  
+</nav>
 <div class="container-fluid">
-  <div class="navbar navbar-dark navbar-fixed-top">
-    <!-- ... -->
-    <h6 id="app-title" class="text-center display-4">Task <i class="fas fa-jedi fa-2x"></i> Force</h6>
+  
+  <div class="row">
+    <div class="card col-md-6">
+      <form action="/" method="POST" class="form">
+        <div class="form-group">
+          <h5 id="form-info" class="header">What do you have in Mind?</h5>
+        </div>
+        
+        <div class="form-group">
+          <hr class="my-4">
+          <input id="todo" name="todo" type="text" class="form-control" id="todo" placeholder="New Task ..." /> 
+        </div>
+        <br>
+        <hr>
+        
+          
+        <button type="submit" class="btn-block form-bound"><i class="fas fa-save fa-2x"></i></button>
     
-  </div>
-
-  <form action="/" method="POST" class="form">
-
-    <h5 id="form-info" class="display-6 lead">What do you have in Mind?</h5>
-
-    <div class="form-group">
-      <hr class="my-4">
-      <input id="todo" name="todo" type="text" class="form-control" id="todo" placeholder="New Task ..." /> 
+      </form>
     </div>
-    <br>
-    <hr>
-    
-      
-    <button type="submit" class="btn-block form-bound"><i class="fas fa-save fa-2x"></i></button>
-
-  </form>
+  </div>
 
     <!-- input + button to implement -->
       <!-- <div class="input-group mb-3">
@@ -34,7 +39,6 @@
             <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
           </div>
       </div> -->
-
 
 </div>
 <div class="container-fluid-2">
