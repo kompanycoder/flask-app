@@ -1,7 +1,24 @@
+<<<<<<< HEAD
 {
     "python.pythonPath": "/usr/bin/python3.7",
     "python.formatting.provider": "autopep8",
     "deepscan.enable": true,
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true
+=======
+{
+    "python.pythonPath": "env\\Scripts\\python.exe",
+    "python.formatting.provider": "autopep8",
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./env",
+        "-p",
+        "test*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.unittestEnabled": false,
+    "python.testing.promptToConfigure": false
+>>>>>>> 7de00e9b0c74519e4c07e46f85ac8901c1a9e323
 }
