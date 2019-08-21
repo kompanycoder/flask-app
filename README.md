@@ -1,6 +1,8 @@
-# Flask-app
+# Task-force app
+  
+  Flask app displaying CRUD capabilities of fullstack applications with sql-alchemy.
 
-# Flask to do fullstack app with sql-alchemy
+# App capabilities:
 - User can add, delete, update tasks
 
 # What was learnt:
@@ -11,10 +13,8 @@
 - Jinja 2 templating and syntax
 - Python classes and database modelling
 
-# Bonus attributes
+# Bonus attributes:
 - Deploying using heroku
 - Versioning and updating software
 - Use of font awesome
 - Design Principles
-
-
