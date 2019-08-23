@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'base.html' %} {% block head %}
 <title>Task Force</title>
 <!-- loggo idea for the app -->
@@ -28,9 +29,29 @@
           
         <button type="submit" class="btn-block form-bound"><i class="fas fa-save fa-2x"></i></button>
     
+<<<<<<< HEAD
       </form>
     </div>
   </div>
+=======
+  </div>
+
+  <form action="/" method="POST" class="form">
+
+    <h5 id="form-info" class="display-6 lead">What do you have in Mind?</h5>
+
+    <div class="form-group">
+      <hr class="my-4">
+      <input id="todo" name="todo" type="text" class="form-control" id="todo" placeholder="New Task ..." /> 
+    </div>
+    <br>
+    <hr>
+    
+      
+    <button type="submit" class="btn-block form-bound"><i class="fas fa-save fa-2x"></i></button>
+
+  </form>
+>>>>>>>  to implement bootstrap files into the project for full offline support
 
     <!-- input + button to implement -->
       <!-- <div class="input-group mb-3">
@@ -40,6 +61,10 @@
           </div>
       </div> -->
 
+<<<<<<< HEAD
+=======
+
+>>>>>>>  to implement bootstrap files into the project for full offline support
 </div>
 <div class="container-fluid-2">
   {% if items|length < 1 %}
@@ -75,4 +100,75 @@
     {% endif %}
   </div>
 
+=======
+{% extends 'base.html' %} {% block head %}
+<title>Task <i class="fas fa-jedi fa-2x"></i> Force</title>
+<!-- loggo idea for the app -->
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+  <div class="navbar navbar-dark navbar-fixed-top">
+    <!-- ... -->
+    <h6 id="app-title" class="text-center display-4">Task <i class="fas fa-jedi fa-2x"></i> Force</h6>
+    
+  </div>
+
+  <form action="/" method="POST" class="form">
+
+    <h5 id="form-info" class="display-6 lead">What do you have in Mind?</h5>
+
+    <div class="form-group">
+      <br />
+      <hr class="my-4">
+      <input id="todo" name="todo" type="text" class="form-control" id="todo" placeholder="New Task ..." />
+    </div>
+
+    <!-- input + button to implement -->
+    <!-- <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+        </div>
+      </div> -->
+      
+    <button type="submit" class="btn item"> <i class="fas fa-folder-plus fa-2x"></i></button>
+
+  </form>
+</div>
+<div class="container-fluid-2">
+  {% if items|length < 1 %}
+
+  <h5 id="no-info lead">No Tasks. Create some...<span>...</span></h5>
+  <br>
+  {% else %}
+  <h5 class="lead text-center"> <i class="fas fa-tasks fa-2x"></i> Tasks Lobby: </h5>
+  <br>
+  <hr class="my-4 text-center">
+  <br>
+  <div id="output" class="column animated">
+    
+    {% for item in items %}
+    <!-- add another idea for the capitalizing of first letter  done-->
+    <!-- another idea bounce the ui for the cards display -->
+
+    <div class="card animated infinite">
+      <div class="card-title">
+        <a class="hover-right" id="delete" href="/delete/{{ item.id }}" role="button">+</a>
+
+      </div>
+      <div class="card-text">
+        <!-- idea to implement DIsplay diferent text here -->
+        <p class="capitalize"> {{ item.content }} </p> <br>
+
+        <span id="left-date">{{ item.date_created.date() }}</span>
+        <a id="update" href="/update/{{ item.id }}" role="button"><i class="fas fa-pen-fancy fa-2x"></i></a>
+        <!-- <a class="btn btn-primary btn-outlined btn-lg" id="delete" href="/delete/{{ item.id }}" role="button">X</a> -->
+      </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+  </div>
+
+>>>>>>> 7de00e9b0c74519e4c07e46f85ac8901c1a9e323
   {% endblock %}
