@@ -22,6 +22,7 @@ class Item(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(150), unique=True, nullable=False)
     date_created = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
+
     def __repr__(self):
         return '<Item %r>' % self.id
 
@@ -29,15 +30,18 @@ class Item(db.Model):
 @app.route('/', methods=['GET', 'POST'])
 def Index():
     if request.method == 'POST':
-        try:
-            if request.form['todo'] != '':
-                itemcontent = request.form['todo']
-                newitem = Item(content=itemcontent)
+        if request.form['todo'] != '':
+            itemcontent = request.form['todo']
+            newitem = Item(content=itemcontent)
+            try:  
+                db.session.add(newitem)
+                db.session.commit()
+                return redirect('/')
+            except:
+                return 'There was an error creating new item.'
             else:
                 return 'Please input a task..'
                 return redirect('/')
-        except:
-            return 'There was an error creating new item.'
     else:
         items = Item.query.order_by(Item.date_created).all()
         return render_template('index.html', items=items)
