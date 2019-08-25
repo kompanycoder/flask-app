@@ -5,7 +5,13 @@ html, body {
   font-style: italic;
   font-weight: 200;
 }
-
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
 .container-form{
   display: flex;
   flex-direction: column;
