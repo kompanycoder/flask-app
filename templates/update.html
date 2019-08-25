@@ -1,25 +1,34 @@
 {% extends 'base.html' %} {% block head %}
 <title>Task Force</title>
-{% endblock %} 
-{% block body %}
+{% endblock %} {% block body %}
 <div class="container-fluid">
-  <div class="navbar navbar-dark navbar-fixed-top">
-    <h6 id="app-title" class="text-center display-4"><i class="fas fa-jedi fa-1x"></i> Task force</h6>
-  </div>
-  <form action="/update/{{ item.id }}" method="POST" class="form">
-
+  <nav class="navbar navbar-dark navbar-fixed-top">
+    <a href="/" id="app-title" class="nav-brand display-4">
+      <i class="fas fa-jedi fa-2x"></i> Task Force</a
+    >
+  </nav>
+  <div class="row">
+  <form action="/update/{{ item.id }}" method="POST" class=" col-md-6 container-form">
     <h5 id="form-info" class="display-6 lead">Satisfied with Update?</h5>
+    <br />
+    <hr class="my-4" />
 
     <div class="form-group">
-      <br />
-      <hr class="my-4">
-
-      <input id="todo" class="form-control" name="todo" type="text" placeholder="Update Task"
-        value="{{ item.content }}" />
+      <input
+        id="todo"
+        class="form-control"
+        name="todo"
+        type="text"
+        placeholder="Update Task"
+        value="{{ item.content }}"
+      />
     </div>
 
-    <button type="submit" class="btn"> <i class="fas fa-plus fa-1x"></i>save</button>
+    <button type="submit" class="btn btn-outline-secondary">
+      Save
+    </button>
   </form>
+</div>
 </div>
 
 {% endblock %}

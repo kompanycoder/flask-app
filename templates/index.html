@@ -9,7 +9,7 @@
 <div class="container-fluid">
   <nav class="navbar navbar-dark navbar-fixed-top">
   
-    <a id="app-title" class="nav-brand display-4"><i class="fas fa-jedi fa-2x"></i> Task Force</a>
+    <a href="/" id="app-title" class="nav-brand display-4"><i class="fas fa-jedi fa-2x"></i> Task Force</a>
     
   </nav>
   <div class="row">
@@ -25,21 +25,15 @@
         <br>
         <hr class="my-4">
         
-          
         <button type="submit" class="btn btn-outline-secondary">
-          <!-- <i class="fas fa-save fa-2x"></i> -->
           Add
         </button>
-    
-
       </form>
     
   </div>
 
   </div>
-
   
-   
   <!-- to implement bootstrap files into the project for full offline support -->
 
     <!-- input + button to implement -->
@@ -51,33 +45,34 @@
       </div> -->
 
 </div>
-<div class="container-fluid-2">
+<div class="container-fluid">
   {% if items|length < 1 %}
 
   <h5 id="no-info lead">No Tasks. Create some...</h5>
   <br>
   {% else %}
+  <hr class="my-4 text-center"> <br>
   <h5 class="lead text-center"> <i class="fas fa-tasks fa-2x"></i> Tasks Lobby: </h5>
+  <br> 
+  
   <br>
-  <hr class="my-4 text-center">
-  <br>
-  <div id="output" class="column animated">
+  <div id="output" class="container">
     
     {% for item in items %}
     <!-- add another idea for the capitalizing of first letter  done-->
     <!-- another idea bounce the ui for the cards display -->
 
-    <div class="card animated infinite">
+    <div class="card">
       <div class="card-title">
         <a class="hover-right" id="delete" href="/delete/{{ item.id }}" role="button">+</a>
 
       </div>
       <div class="card-text">
         <!-- idea to implement DIsplay diferent text here -->
-        <p class="capitalize"> {{ item.content }} </p> <br>
+        <p class="text-center"> {{ item.content }} </p> <br>
 
         <span id="left-date">{{ item.date_created.date() }}</span>
-        <a id="update" class="btn" href="/update/{{ item.id }}" role="button"><i class="fas fa-edit fa-2x"></i></a>
+        <a id="update" class="btn btn-outline-secondary" href="/update/{{ item.id }}" role="button">edit</a>
         <!-- <a class="btn btn-primary btn-outlined btn-lg" id="delete" href="/delete/{{ item.id }}" role="button">X</a> -->
       </div>
     </div>
