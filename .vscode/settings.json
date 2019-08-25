@@ -2,6 +2,5 @@
     "python.pythonPath": "/usr/bin/python3.7",
     "python.formatting.provider": "autopep8",
     "deepscan.enable": true,
-    "python.linting.pylintEnabled": true,
-    "python.linting.enabled": true
+    "python.linting.pylintEnabled": false
 }
