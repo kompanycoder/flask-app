@@ -38,7 +38,7 @@ def Index():
             return redirect('/')
         else:
             return 'Please input a task..'
-            # return redirect('/')
+            # add template for no input found
     else:
         items = Item.query.order_by(Item.date_created).all()
         return render_template('index.html', items=items)

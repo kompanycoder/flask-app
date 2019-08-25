@@ -5,33 +5,35 @@
 {% endblock %}
 
 {% block body %}
-<nav class="navbar navbar-dark navbar-fixed-top">
-  
-  <a id="app-title" class="nav-brand text-center display-4"><i class="fas fa-jedi fa-2x"></i> Task Force</a>
-  
-</nav>
+
 <div class="container-fluid">
+  <nav class="navbar navbar-dark navbar-fixed-top">
   
+    <a id="app-title" class="nav-brand display-4"><i class="fas fa-jedi fa-2x"></i> Task Force</a>
+    
+  </nav>
   <div class="row">
-    <div class="card col-md-6">
-      <form action="/" method="POST" class="form">
+   
+      <form action="/" method="POST" class=" col-md-6 container-form">
         <div class="form-group">
           <h5 id="form-info" class="header">What do you have in Mind?</h5>
         </div>
-        
+        <hr class="my-4">
         <div class="form-group">
-          <hr class="my-4">
-          <input id="todo" name="todo" type="text" class="form-control" id="todo" placeholder="New Task ..." /> 
+          <input id="todo" name="todo" type="text" class="form-control" id="todo" placeholder="New Task ..." />
         </div>
         <br>
-        <hr>
+        <hr class="my-4">
         
           
-        <button type="submit" class="btn-block form-bound"><i class="fas fa-save fa-2x"></i></button>
+        <button type="submit" class="btn btn-outline-secondary">
+          <!-- <i class="fas fa-save fa-2x"></i> -->
+          Add
+        </button>
     
 
       </form>
-    </div>
+    
   </div>
 
   </div>
