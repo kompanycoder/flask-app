@@ -13,7 +13,11 @@ app.config['PYBRAKE'] = dict(
     project_id=237813,
     project_key='3ee9d6fc6b462f0dae3b37a41366e914'
 )
-
+try:
+    raise ValueError('hello')
+except Exception as err:
+    notifier.notify(err)
+    
 # init db session for the whole app
 db = SQLAlchemy(app)
 # do something with app...
