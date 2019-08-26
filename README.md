@@ -1,5 +1,5 @@
 
-# Task-force app
+# Task-force app badges: [![DeepScan grade](https://deepscan.io/api/teams/5092/projects/6879/branches/60339/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=5092&pid=6879&bid=60339)
   
   Flask app displaying CRUD capabilities of fullstack applications with sql-alchemy.
 
