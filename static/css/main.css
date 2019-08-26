@@ -69,6 +69,7 @@ a:hover, a:focus {
   font-weight: 200;
   font-style: italic bold;
   font-size: 2rem;
+  color: #6c757d;
 }
 
 /* output for the cadrd container */
