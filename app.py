@@ -3,16 +3,16 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 app = Flask(__name__)
-# app = pybrake.flask.init_app(app)
+app = pybrake.flask.init_app(app)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # to implement pybrake here
-# app.config['PYBRAKE'] = dict(
-#     project_id=237813,
-#     project_key='3ee9d6fc6b462f0dae3b37a41366e914'
-# )
+app.config['PYBRAKE'] = dict(
+    project_id=237813,
+    project_key='3ee9d6fc6b462f0dae3b37a41366e914'
+)
 
 # init db session for the whole app
 db = SQLAlchemy(app)
