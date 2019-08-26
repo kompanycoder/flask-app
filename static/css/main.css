@@ -1,4 +1,5 @@
 html, body {
+  color:  #282a2c;
   margin:0;
   padding: 0;
   font-family: sans-serif;
@@ -8,12 +9,12 @@ html, body {
 
 a {
   text-decoration: none;
-  color: #000000;
+  color:  #6c757d;
 }
 a:hover, a:focus {
   text-decoration: none;
   cursor: pointer;
-  color: #000000;
+  color:  #6c757d;
 }
 .row {
   display: flex;
@@ -31,7 +32,7 @@ a:hover, a:focus {
   vertical-align: center;
   padding-top: 20px;
   padding-bottom: 10px;
-  border: 1px solid #ff500a;
+  border: 1px solid  #6c757d;
   border-radius: 10px;
   
 }
@@ -41,7 +42,7 @@ a:hover, a:focus {
   background: transparent;
   padding: 10px;
   justify-content: center;
-  border-bottom: 1px solid #ff500a;
+  border-bottom: 1px solid #6c757d;
 }
 .nav-brand{
   display: flex;
@@ -50,6 +51,18 @@ a:hover, a:focus {
 #app-title {
   display: inline;
   text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT';
+  font-size: 3.0rem;
+  font-weight: 400;
+  font-style: italic;
+  animation: ease-in;
+  -webkit-animation: ease-in;
+  animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+  animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  animation-duration: 0.7s;
+  -webkit-animation-duration: 0.7s;
 }
 
 .lead{
@@ -64,7 +77,7 @@ a:hover, a:focus {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(1fr);
   grid-gap: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 70px;
 
 }
 
@@ -91,6 +104,9 @@ a:hover, a:focus {
   right: 0;
   margin: 5px;
 }
+.footer{
+  padding-bottom: 40px;
+}
 
 /* media queries */
 @media(max-width: 540px) {
@@ -98,10 +114,18 @@ a:hover, a:focus {
     width: 95%;
   }
   #output{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    padding-bottom: 20px;
+  }
+  .footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
-@media(min-width: 541px) and (max-width: 767px) {
-
+@media (min-width: 541px) {
+  .container-form {
+    width: 75%;
+  }
 }

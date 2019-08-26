@@ -20,25 +20,25 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap-grid.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap-reboot.css')}}">
     <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/bootstrap.css') }}"
-    />
+      rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
     <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
     
     
     
-    <!-- <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/animate.css') }}"
-    /> -->
+    <link  rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}" />
     
     {% block head %} {% endblock %}
   </head>
   <body >
     {% block body %} {% endblock %}
+  <br>
+  <div class="footer text-center">
+    <h6>copyright &copy; 2019;</h6>
+    <h6></h6>
+  </div>
+
     <!-- add script incase of custom rendering for js animations: way afterwards!! -->
     <script href="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
-
   </body>
 </html>
 

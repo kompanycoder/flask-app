@@ -9,7 +9,7 @@
 <div class="container-fluid">
   <nav class="navbar navbar-dark navbar-fixed-top">
   
-    <a href="/" id="app-title" class="nav-brand display-4"><i class="fas fa-jedi fa-2x"></i> Task Force</a>
+    <a href="/" id="app-title" class="nav-brand"><i class="fas fa-jedi fa-2x"></i> Task Force</a>
     
   </nav>
   <div class="row">
@@ -48,7 +48,7 @@
 <div class="container-fluid">
   {% if items|length < 1 %}
 
-  <h5 id="no-info lead">No Tasks. Create some...</h5>
+  <h5 id="lead" class="text-center pt-5">No Tasks. Create some...</h5>
   <br>
   {% else %}
   <hr class="my-4 text-center"> <br>
@@ -73,7 +73,7 @@
 
         <span id="left-date">{{ item.date_created.date() }}</span>
         <a id="update" class="btn btn-outline-secondary" href="/update/{{ item.id }}" role="button">edit</a>
-        <!-- <a class="btn btn-primary btn-outlined btn-lg" id="delete" href="/delete/{{ item.id }}" role="button">X</a> -->
+      
       </div>
     </div>
     {% endfor %}
