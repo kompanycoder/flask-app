@@ -3,9 +3,8 @@ python:
   - "3.6"
   # PyPy versions
   - "pypy3"  # currently Python 3.6.1,
-virtualenv:
-  system_site_packages: true
 # command to install dependencies
 install:
   - pip install -r requirements.txt
+#   command for running app
 script: python3 my_app.py
