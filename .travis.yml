@@ -7,4 +7,4 @@ python:
 install:
   - pip install -r requirements.txt
 #   command for running app
-script: python3 my_app.py
+script: python3 app.py
