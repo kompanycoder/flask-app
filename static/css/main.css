@@ -1,6 +1,7 @@
-html, body {
-  color:  #282a2c;
-  margin:0;
+html,
+body {
+  color: #282a2c;
+  margin: 0;
   padding: 0;
   font-family: sans-serif;
   font-style: italic;
@@ -9,12 +10,13 @@ html, body {
 
 a {
   text-decoration: none;
-  color:  #6c757d;
+  color: #343a40;
 }
-a:hover, a:focus {
+a:hover,
+a:focus {
   text-decoration: none;
   cursor: pointer;
-  color:  #6c757d;
+  color: #343a40;
 }
 .row {
   display: flex;
@@ -24,7 +26,7 @@ a:hover, a:focus {
   justify-content: center;
   padding-bottom: 50px;
 }
-.container-form{
+.container-form {
   display: flex;
   flex-direction: column;
   margin-top: 10vh;
@@ -32,31 +34,30 @@ a:hover, a:focus {
   vertical-align: center;
   padding-top: 20px;
   padding-bottom: 10px;
-  border: 1px solid  #6c757d;
+  border: 1px solid #343a40;
   border-radius: 10px;
-  
 }
-.navbar{
+.navbar {
   min-height: 50;
   width: 100%;
   background: transparent;
   padding: 10px;
   justify-content: center;
-  border-bottom: 1px solid #6c757d;
+  border-bottom: 3px solid #6610f2;
 }
-.nav-brand{
+.nav-brand {
   display: flex;
-  max-width: 200px;
+  max-width: 400px;
 }
 #app-title {
   display: inline;
   text-align: center;
-  font-family: 'Gill Sans', 'Gill Sans MT';
-  font-size: 3.0rem;
+  font-family: "Gill Sans", "Gill Sans MT";
+  font-size: 3rem;
   font-weight: 400;
   font-style: italic;
-  animation: ease-in;
-  -webkit-animation: ease-in;
+  animation: rubberBand;
+  -webkit-animation: rubberBand;
   animation-delay: 0.4s;
   -webkit-animation-delay: 0.4s;
   animation-direction: reverse;
@@ -65,38 +66,45 @@ a:hover, a:focus {
   -webkit-animation-duration: 0.7s;
 }
 
-.lead{
+.lead {
   font-weight: 200;
   font-style: italic bold;
   font-size: 2rem;
-  color: #6c757d;
+  color: #343a40;
 }
 
 /* output for the cadrd container */
-#output{
+#output {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(1fr);
   grid-gap: 20px;
   padding-bottom: 70px;
-
 }
 
 /* card format */
 .card {
   flex: 1;
   padding-left: 5px;
-  border: 1px solid #686565;
+  border: 1px solid #343a40;
+  animation: tada;
+  -webkit-animation: tada;
+  animation-delay: 0.7s;
+  -webkit-animation-delay: 0.7s;
+  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
 }
-
+.card:hover {
+  box-shadow: 2px 3px #282a2c;
+}
 
 /* delete button inform of an x */
 .hover-right {
- position: absolute;
- right: 0;
- top: 0;
- padding: 10px;
- transform: rotate(45deg);
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px;
+  transform: rotate(45deg);
 }
 /* edit button */
 #update {
@@ -105,16 +113,17 @@ a:hover, a:focus {
   right: 0;
   margin: 5px;
 }
-.footer{
-  padding-bottom: 40px;
+.footer {
+  padding-bottom: 30px;
+  bottom: 0;
 }
 
 /* media queries */
-@media(max-width: 540px) {
+@media (max-width: 540px) {
   .container-form {
     width: 95%;
   }
-  #output{
+  #output {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 10px;
