@@ -1,17 +1,17 @@
 from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
-import os
-
+import os 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL') or 'sqlite:///test.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_BINDS'] = False
 
-# init db session for the whole app
+# make db instance
 db = SQLAlchemy(app)
-# do something with app...
 
+# Item model
 class Item(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(150), unique=True, nullable=False)
