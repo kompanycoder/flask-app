@@ -44,7 +44,7 @@ a:focus {
   background: transparent;
   padding: 10px;
   justify-content: center;
-  border-bottom: 3px solid #6610f2;
+  border-bottom: 3px solid #282a2c;
 }
 .nav-brand {
   display: flex;
