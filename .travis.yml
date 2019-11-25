@@ -5,5 +5,6 @@ python:
 # command to install dependencies
 install:
   - pip install -r requirements.txt
-#   command for running app
-# script: python3 app.py
+#   command for running app tests
+script: 
+  - pytest
