@@ -57,14 +57,14 @@ a:focus {
   font-size: 3rem;
   font-weight: 400;
   font-style: italic;
-  animation: rubberBand;
-  -webkit-animation: rubberBand;
+  animation: wobble;
+  -webkit-animation: wobble;
   animation-delay: 0.4s;
   -webkit-animation-delay: 0.4s;
   animation-direction: reverse;
   -webkit-animation-direction: reverse;
-  -webkit-animation-duration: 0.75s;
-  animation-duration: 0.75s;
+  -webkit-animation-duration: 4.75s;
+  animation-duration: 4.75s;
 }
 
 .lead {
