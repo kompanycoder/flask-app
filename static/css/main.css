@@ -63,8 +63,8 @@ a:focus {
   -webkit-animation-delay: 0.4s;
   animation-direction: reverse;
   -webkit-animation-direction: reverse;
-  animation-duration: 0.7s;
-  -webkit-animation-duration: 0.7s;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
 }
 
 .lead {
@@ -102,12 +102,12 @@ a:focus {
   flex: 1;
   padding-left: 5px;
   border: 1px solid #343a40;
-  animation: tada;
-  -webkit-animation: tada;
-  animation-delay: 0.7s;
-  -webkit-animation-delay: 0.7s;
-  animation-duration: 0.5s;
-  -webkit-animation-duration: 0.5s;
+  animation: bounceInUp;
+  -webkit-animation: bounceInUp;
+  animation-delay: 0.9s;
+  -webkit-animation-delay: 0.9s;
+  -webkit-animation-duration: 2.75s;
+  animation-duration: 2.75s;
   box-shadow: 1px 1px #343a40;
 }
 .card:hover {
