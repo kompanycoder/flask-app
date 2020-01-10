@@ -102,8 +102,8 @@ a:focus {
   flex: 1;
   padding-left: 5px;
   border: 1px solid #343a40;
-  animation: bounceInUp;
-  -webkit-animation: bounceInUp;
+  animation: fadeInLeft;
+  -webkit-animation: fadeInLeft;
   animation-delay: 0.9s;
   -webkit-animation-delay: 0.9s;
   -webkit-animation-duration: 2.75s;
